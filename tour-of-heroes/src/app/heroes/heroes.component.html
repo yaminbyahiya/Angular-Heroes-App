@@ -1,3 +1,6 @@
 <h1>{{hero.name}} Details</h1>
 <div><span>ID: </span>{{hero.id}}</div>
-<div><span>Name: </span>{{hero.name}}</div>
+<div>
+    <label for="">Hero Name:</label>
+    <input type="text" [(ngModel)]="hero.name">
+</div>
