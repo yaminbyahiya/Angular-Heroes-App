@@ -9,8 +9,13 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent {
   heroes = HEROES;
+  selectedHero?:Hero;
   hero:Hero = {
     id:1,
     name: "Iron Man"
+  }
+  onSelected(hero:Hero):void{
+    console.log(hero.name);
+    this.selectedHero=hero;
   }
 }
