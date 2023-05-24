@@ -1,6 +1,13 @@
+<h2>Hero List</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul>
+<!-- 
 <h1>{{hero.name}} Details</h1>
 <div><span>ID: </span>{{hero.id}}</div>
 <div>
     <label for="">Hero Name:</label>
     <input type="text" [(ngModel)]="hero.name">
-</div>
+</div> -->
