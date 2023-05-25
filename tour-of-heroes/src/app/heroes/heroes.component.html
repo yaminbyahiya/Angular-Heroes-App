@@ -7,6 +7,7 @@
         </button>
       </li>
 </ul>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 <!-- 
 <h1>{{hero.name}} Details</h1>
 <div><span>ID: </span>{{hero.id}}</div>
@@ -14,13 +15,4 @@
     <label for="">Hero Name:</label>
     <input type="text" [(ngModel)]="hero.name">
 </div> -->
-<div *ngIf="selectedHero">
-    <h2>{{selectedHero}} Details</h2>
-    <div>
-        <span>ID: </span>{{selectedHero.id}}
-    </div>
-    <div>
-        <label for="hero-name">Hero Name: </label>
-        <input id="hero-name" type="text" [(ngModel)]="selectedHero.name" placeholder="name">
-    </div>
-</div>
+
