@@ -14,7 +14,7 @@ export class HeroesComponent {
     id:1,
     name: "Iron Man"
   }
-  onSelected(hero:Hero):void{
+  onSelect(hero:Hero):void{
     console.log(hero.name);
     this.selectedHero=hero;
   }
