@@ -21,6 +21,6 @@ export class HeroesComponent {
     this.selectedHero=hero;
   }
   getHeroes():void{
-    this.heroes=this.heroService.getHeroes();
+    this.heroService.getHeroes().subscribe(return_value => this.heroes = return_value);
   }
 }
