@@ -13,6 +13,6 @@ export class DashboardComponent {
     this.getHeroes();
   }
   getHeroes(){
-    this.heroService.getHeroes().subscribe(result => this.heroes = result.slice(1,5));
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(1,5));
   }
 }
