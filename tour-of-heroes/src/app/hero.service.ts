@@ -11,9 +11,9 @@ export class HeroService {
 
   constructor(private messageService:MessageService, private httpClient: HttpClient) { }
   getHero(id:number):Observable<Hero>{
-    const hero = HEROES.find(result => result.id === id)!;
+    const hero = this.httpClient.get<Hero>('http://127.0.0.1:5000/detail/' + id.toString());
     this.messageService.add(`Selected hero with ID: ${id}`);
-    return of(hero);
+    return hero;
   }
   getHeroes():Observable<Hero[]>{
     const heroes = this.httpClient.get<Hero[]>('http://127.0.0.1:5000/heroes');

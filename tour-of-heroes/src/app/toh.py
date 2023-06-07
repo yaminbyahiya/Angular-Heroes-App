@@ -17,8 +17,14 @@ all_heroes=[
 ]
 
 @app.route('/heroes', methods=['GET'])
-
 def heroes():
     return jsonify(all_heroes)
+
+@app.route('/detail/<id>', methods=['GET'])
+def detail(id):
+    for x in all_heroes:
+        if int(x['id']) == int(id):
+            return jsonify(x)
+    return 0
 
 app.run()
