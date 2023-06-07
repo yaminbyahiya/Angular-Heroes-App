@@ -20,4 +20,7 @@ export class HeroService {
     this.messageService.add("Hero Service Fetched Hero Data");
     return heroes;
   }
+  updateHero(hero:Hero):Observable<Hero>{
+    return this.httpClient.post<Hero>('http://127.0.0.1:5000/update',hero);
+  }
 }

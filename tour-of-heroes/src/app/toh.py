@@ -25,6 +25,19 @@ def detail(id):
     for x in all_heroes:
         if int(x['id']) == int(id):
             return jsonify(x)
-    return 0
+    return "Record not found", 400
+
+@app.route('/update', methods=['POST'])
+def update():
+    data = request.data
+    string = data.decode('UTF-8')
+    data = eval(string)
+    for x in all_heroes:
+        if x['id'] == data['id']:
+            x['name'] == data['name']
+            print(all_heroes)
+            return x
+        
+    return "Not found", 400
 
 app.run()
